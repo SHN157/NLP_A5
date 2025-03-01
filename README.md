@@ -56,8 +56,13 @@ This project fine-tunes GPT-2 using **Direct Preference Optimization (DPO)** to 
 Performance results of 3 different training configurations are shown below.
 
 ![Result of config 1](testing/PerformanceConfig1.png)
+*Figure 1: Training results for configuration 1.*
+
 ![Result of config 2](testing/PerformanceConfig2.png)
+*Figure 2: Training results for configuration 2.*
+
 ![Result of config 3](testing/PerformanceConfig3.png)
+*Figure 3: Training results for configuration 3.*
 
 - **Best Model Configuration**:
   - **Learning Rate**: `0.002`
@@ -65,14 +70,6 @@ Performance results of 3 different training configurations are shown below.
   - **Optimizer**: AdamW
   - **Beta**: `0.3`
   - **Training Steps**: `500`
-
-- **Final Evaluation Metrics**:
-  - **Validation Loss**: `7.6546`
-  - **Accuracy**: `0.5386`
-  - **Rewards (Chosen)**: `-94.2978`
-  - **Rewards (Rejected)**: `-95.1950`
-  - **Logits (Chosen)**: `-13.2821`
-  - **Logits (Rejected)**: `-13.3287`
 
 ---
 
@@ -107,6 +104,7 @@ Open [http://localhost:8501/](http://localhost:8501/) in your browser.
 Below is a screenshot from the testing phase of the web application.
 
 ![Testing Web App](testing/Webtesting.png)
+*Figure 4: Sample test of the web application.*
 
 ---
 
