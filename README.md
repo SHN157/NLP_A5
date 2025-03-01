@@ -3,6 +3,24 @@
 
 [View Model on Hugging Face](https://huggingface.co/SHN157/dpo-model)
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Model Details](#model-details)
+- [Training & Evaluation Results](#training--evaluation-results)
+- [Model Deployment](#model-deployment)
+- [Web Application](#web-application)
+- [Sample Web App Testing](#sample-web-app-testing)
+- [Conclusion](#conclusion)
+
+---
+
+## Student Information
+- **Name**: Soe Htet Naing  
+- **ID**: st125166  
+
+---
+
 ## Project Overview
 This project fine-tunes GPT-2 using **Direct Preference Optimization (DPO)** to align the model's responses with user preferences. The training utilizes **UltraFeedback**, a dataset containing human feedback on model-generated responses.
 
@@ -35,6 +53,12 @@ This project fine-tunes GPT-2 using **Direct Preference Optimization (DPO)** to 
 ---
 
 ## Training & Evaluation Results
+Performance results of 3 different training configurations are shown below.
+
+![Result of config 1](testing/PerformanceConfig1.png)
+![Result of config 2](testing/PerformanceConfig2.png)
+![Result of config 3](testing/PerformanceConfig3.png)
+
 - **Best Model Configuration**:
   - **Learning Rate**: `0.002`
   - **Batch Size**: `8`
@@ -80,4 +104,11 @@ Open [http://localhost:8501/](http://localhost:8501/) in your browser.
 ---
 
 ## Sample Web App Testing
-Below are some screenshots from the testing phase of the web application.
+Below is a screenshot from the testing phase of the web application.
+
+![Testing Web App](testing/Webtesting.png)
+
+---
+
+## Conclusion
+This project successfully fine-tuned **GPT-2** using Direct Preference Optimization (DPO). The fine-tuned model aligns better with user preferences, and the **Streamlit web app** enables real-time interaction with the chatbot.
