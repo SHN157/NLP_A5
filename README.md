@@ -74,7 +74,7 @@ Performance results of 3 different training configurations are shown below.
 ---
 
 ## Model Deployment
-The fine-tuned model is available on **Hugging Face**:
+The fine-tuned model is available on **Hugging Face** and loaded to use in web application with the following code:
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
