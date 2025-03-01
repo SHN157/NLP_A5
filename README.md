@@ -27,15 +27,7 @@ This project fine-tunes GPT-2 using **Direct Preference Optimization (DPO)** to 
 ---
 
 ## Dataset
-- **Source**: [UltraFeedback Dataset](https://huggingface.co/datasets/openbmb/UltraFeedback)
-- **Dataset Used**: `argilla/ultrafeedback-binarized-preferences-cleaned`
-- **Structure**:
-  - **Train size**: 48,733 samples
-  - **Test size**: 12,184 samples
-  - **Features**:
-    - `prompt`: The user input or context
-    - `chosen`: Preferred model response
-    - `rejected`: Non-preferred model response
+The original dataset contained only a **train split** with **60,917** samples and required preprocessing. The dataset included additional metadata fields such as **ratings and models**, which were not necessary for training. To refine it, only **three key fields** were extracted: `prompt`, `chosen`, and `rejected`. After cleaning, the dataset was split into **train (80%) and test (20%)**, resulting in **48,733** training samples and **12,184** test samples.
 
 ---
 
@@ -74,17 +66,9 @@ Performance results of 3 different training configurations are shown below.
 ---
 
 ## Model Deployment
-The fine-tuned model is available on **Hugging Face** and loaded to use in web application with the following code:
+The fine-tuned model was uploaded to **Hugging Face Hub** for easy accessibility. The model was stored locally before being uploaded. If the repository did not exist, it was created. The final deployment involved pushing only the trained model files to the repository to ensure minimal storage usage while maintaining accessibility. The uploaded model is available at:
 
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-repo_name = "SHN157/dpo-model"
-model = AutoModelForCausalLM.from_pretrained(repo_name)
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
-print("✅ Model successfully loaded from Hugging Face.")
-```
+[**Hugging Face Model Repository**](https://huggingface.co/SHN157/dpo-model)
 
 ---
 
